@@ -1,70 +1,71 @@
-Nurofy: Custom AI Solutions for Businesses
-Nurofy is a B2B web platform designed to showcase and deliver custom AI solutions, specializing in advanced neural networks and deep learning models tailored to the needs of businesses. The platform combines a sleek, modern frontend with a Flask-based backend for handling subscriptions and data management.
+# Nurofy: Custom AI Solutions for Businesses
 
-🚀 Features
-Landing Page
-Hero section introducing Nurofy’s mission and value proposition.
+**Nurofy** is a B2B web platform designed to showcase and deliver custom AI solutions, specializing in advanced neural networks and deep learning models tailored to the needs of businesses. The platform combines a sleek, modern frontend with a Flask-based backend for handling subscriptions and data management.
 
-What We Do
-Overview of the company’s AI services and B2B focus.
+---
 
-Model Showcase
-Interactive model cards with embedded demos (e.g., Streamlit apps) that load via iframe.
+## 🚀 Features
 
-Get a Quote
-Contact form for businesses to request quotes (includes email and phone).
+- **Landing Page**  
+  Hero section introducing Nurofy’s mission and value proposition.
 
-Email Subscription API
+- **What We Do**  
+  Overview of the company’s AI services and B2B focus.
 
-Validates email format
+- **Model Showcase**  
+  Interactive model cards with embedded demos (e.g., Streamlit apps) that load via iframe.
 
-Limits submissions to 5 per IP
+- **Get a Quote**  
+  Contact form for businesses to request quotes (includes email and phone).
 
-Ensures uniqueness
+- **Email Subscription API**  
+  - Validates email format  
+  - Limits submissions to 5 per IP  
+  - Ensures uniqueness  
+  - Stores email, IP address, and timestamp  
+  - Responds with success/failure message
 
-Stores email, IP address, and timestamp
+- **Responsive Design**  
+  Fully optimized for desktop and mobile.
 
-Responds with success/failure message
+- **Custom Theming**  
+  Space-themed visuals and stylized UI for a professional, branded look.
 
-Responsive Design
-Fully optimized for desktop and mobile.
+---
 
-Custom Theming
-Space-themed visuals and stylized UI for a professional, branded look.
+## 🗂️ Project Structure
 
-🗂️ Project Structure
-pgsql
-Copy
-Edit
 Nurofy/
 ├── Website program/
-│   ├── assets/
-│   │   └── space_background.png
-│   ├── index.html
-│   ├── get-a-quote.html
-│   ├── script.js
-│   └── style.css
+│ ├── assets/
+│ │ └── space_background.png
+│ ├── index.html
+│ ├── get-a-quote.html
+│ ├── script.js
+│ └── style.css
 └── backend/
-    ├── app.py
-    └── .env
-⚙️ Backend Overview
-🔧 Technology Stack
-Flask – Python web framework
+├── app.py
+└── .env
 
-Flask-MySQLdb – MySQL integration
-
-Flask-CORS – CORS handling for frontend-backend communication
-
-python-dotenv – Loads environment variables
-
-MySQL – Stores subscriber information
-
-📬 API: /subscribe (POST)
-Accepts:
-
-json
+yaml
 Copy
 Edit
+
+---
+
+## ⚙️ Backend Overview
+
+### 🔧 Technology Stack
+- **Flask** – Python web framework  
+- **Flask-MySQLdb** – MySQL integration  
+- **Flask-CORS** – CORS handling for frontend-backend communication  
+- **python-dotenv** – Loads environment variables  
+- **MySQL** – Stores subscriber information
+
+### 📬 API: `/subscribe` (POST)
+
+Accepts:
+```json
 {
   "email": "user@example.com"
 }
