@@ -1,6 +1,7 @@
 # Nurofy: Custom AI Solutions for Businesses
 
 **Nurofy** is a B2B web platform designed to showcase and deliver custom AI solutions, specializing in advanced neural networks and deep learning models tailored to the needs of businesses. The platform combines a sleek, modern frontend with a Flask-based backend for handling subscriptions and data management.
+<img width="1920" height="958" alt="Screenshot 2025-07-24 112258" src="https://github.com/user-attachments/assets/a704608d-28fa-4762-8bee-eecab7497b6f" />
 
 ---
 
