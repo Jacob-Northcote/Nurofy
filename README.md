@@ -65,12 +65,13 @@ Edit
 
 ### 📬 API: `/subscribe` (POST)
 
-Accepts:
-```json
+✅ Accepts:
+
 {
-  "email": "user@example.com"
+"email": "user@example.com"
 }
-Validates:
+
+🧪 Validates:
 
 Email format
 
@@ -78,7 +79,7 @@ Max 5 requests per IP
 
 Unique email
 
-Stores:
+💾 Stores:
 
 Email
 
@@ -86,81 +87,61 @@ IP address
 
 Timestamp
 
-Returns:
+📤 Returns:
 
-json
-Copy
-Edit
 {
-  "success": true,
-  "message": "Thank you for subscribing!"
+"success": true,
+"message": "Thank you for subscribing!"
 }
+
 🧪 How to Run Locally
-1. Clone the Repository
-bash
-Copy
-Edit
+
+Clone the Repository
 git clone https://github.com/yourusername/nurofy.git
 cd nurofy
-2. Set Up the Backend
-Create and activate a virtual environment:
 
-bash
-Copy
-Edit
+Set Up the Backend
+
+Create and activate a virtual environment:
 cd backend
 python -m venv venv
-venv\Scripts\activate      # On Windows
-# OR
-source venv/bin/activate  # On Mac/Linux
+venv\Scripts\activate # On Windows
+OR
+source venv/bin/activate # On Mac/Linux
+
 Install dependencies:
-
-bash
-Copy
-Edit
 pip install flask flask-mysqldb flask-cors python-dotenv
-Set up MySQL:
 
-sql
-Copy
-Edit
+Set up MySQL:
 CREATE DATABASE nurofy;
 USE nurofy;
 CREATE TABLE subscribers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    email VARCHAR(255) UNIQUE,
-    ip_address VARCHAR(45),
-    created_at DATETIME
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255),
+email VARCHAR(255) UNIQUE,
+ip_address VARCHAR(45),
+created_at DATETIME
 );
-Create .env file in /backend/:
 
-env
-Copy
-Edit
+Create .env file in /backend/:
 MYSQL_HOST=localhost
 MYSQL_USER=root
 MYSQL_PASSWORD=your_mysql_password
 MYSQL_DB=nurofy
-Run the backend:
 
-bash
-Copy
-Edit
+Run the backend:
 python app.py
 Backend runs at: http://127.0.0.1:5000
 
-3. Serve the Frontend
-Open a new terminal:
+Serve the Frontend
 
-bash
-Copy
-Edit
+Open a new terminal:
 cd "Website program"
 python -m http.server 8000
 Frontend is available at: http://localhost:8000
 
 🔗 Connecting Frontend to Backend
+
 AJAX requests from http://localhost:8000 are allowed via CORS.
 
 To use the /subscribe endpoint:
@@ -170,35 +151,38 @@ Add a form to index.html
 Use JavaScript to POST to http://127.0.0.1:5000/subscribe
 
 🎨 Customization
-Model Cards
+
+Model Cards:
 Update index.html iframe elements with your actual model demos and URLs.
 
-Contact Info
+Contact Info:
 Edit get-a-quote.html with your business email and phone number.
 
-Branding
+Branding:
 Modify style.css or replace space_background.png to match your brand identity.
 
 🛠️ Troubleshooting
-CORS Errors
+
+CORS Errors:
 Ensure backend is running and CORS is correctly configured.
 
-Database Errors
+Database Errors:
 Double-check MySQL credentials and table setup.
 
-Port Conflicts
+Port Conflicts:
 Make sure ports 5000 (backend) and 8000 (frontend) are free.
 
 🤝 Contributing
+
 Fork the repo
 
-Create a branch: git checkout -b feature/your-feature
+Create a branch:
+git checkout -b feature/your-feature
 
-Commit changes: git commit -am 'Add new feature'
+Commit changes:
+git commit -am 'Add new feature'
 
-Push branch: git push origin feature/your-feature
+Push branch:
+git push origin feature/your-feature
 
 Open a Pull Request
-
-📄 License
-MIT License – free to use and modify with attribution.
